@@ -4,6 +4,7 @@ import Data.List (sortBy)
 import Data.Char (digitToInt)
 import Data.Ord (comparing)
 
+
 -- | Sort numbers by the sum of their digits: https://biturl.io/SortWeight
 -- | a refactored solution I came up with after completition of this kata
 sortBySum :: String -> String
@@ -21,3 +22,15 @@ isHappy 1 = True
 isHappy 4 = False
 isHappy n = isHappy $ sum $ map ((^2) . digitToInt) (show n)
 
+
+-- | Form the smallest number by moving one digit: https://biturl.io/Smallest
+-- | a refactored solution I came up with after completition of this kata
+smallest :: Integer -> (Integer, Int, Int)
+smallest n = minimum [ (read . f i j . show $ n, i, j) | i <- is, j <- is ]
+ where
+  is = [0 .. length (show n) - 1]
+  f i j xs = let (e, l) = g i xs in h j e l
+  g i xs = (xs !! i, take i xs ++ drop (i + 1) xs)
+  h i e xs = take i xs ++ [e] ++ drop i xs
+-- | my original solution used 'insert' and didn't chceck all permutations,
+-- |   but it didn't work 100% of the time, so this solution is still better

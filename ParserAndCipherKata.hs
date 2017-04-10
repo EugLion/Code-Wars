@@ -1,9 +1,10 @@
 module ParserAndCipherKata where
 
 import Data.List (isPrefixOf, last, groupBy, sortBy)
-import Data.Char (isDigit, digitToInt, ord, chr)
+import Data.Char (isDigit, digitToInt, ord)
 import Data.Ord (comparing)
 import Data.Function (on)
+
 
 -- | The table with Roman / Arabic numeral encodings
 codeTable :: [(String, Int)]
@@ -50,10 +51,9 @@ caesarSort :: [String] -> [[String]]
 caesarSort s = foldr (\a b -> if a `elem` b then b else a : b) []
   $ map (helper . snd) zipped
  where
-  zipped = zip s (map getDiff s)
+  zipped = zip s (map base s)
   helper x = foldr (\ (a1, a2) b -> if a2 == x then a1 : b else b) [] zipped
-  getDiff [] = []
-  getDiff (x:xs) = 0 : map (\c -> (ord c - ord x) `mod` 26) xs
+  base s@(x:_) = map (\c -> (ord c - ord x) `mod` 26) s
 
 -- | a solution I found on CW after solving it rather clunkily myself
 caesarSortNew :: [String] -> [[String]]
