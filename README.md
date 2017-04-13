@@ -12,5 +12,12 @@ The lower the number the better (this system somehow reflects levels in karate).
 
  Be sure to add me on Code Wars ([profile link][2]) - I just started learning Haskell and I'd love to be in contact with some skilled people; or just to meet new friends!
 
+### Kata categories
+You can see all the completed katas on my [CW profile][2]. Here is just a summary, so you can see how many katas I've completed from the different categories.
+
+| Haskell Specific | Number Algos | String Algos | Parsers & Ciphers |
+| :--------------: | :----------: | :----------: | :---------------: |
+| 2                | 4            | 4            | 4                 |
+
 [1]: https://www.codewars.com/
 [2]: https://www.codewars.com/users/EugLion
