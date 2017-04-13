@@ -34,3 +34,9 @@ smallest n = minimum [ (read . f i j . show $ n, i, j) | i <- is, j <- is ]
   h i e xs = take i xs ++ [e] ++ drop i xs
 -- | my original solution used 'insert' and didn't chceck all permutations,
 -- |   but it didn't work 100% of the time, so this solution is still better
+
+-- | Get the last digit of the expression x^y: https://biturl.io/Last
+-- | a refactored solution I came up with after completition of this kata
+lastDigit :: Integer -> Integer -> Integer
+lastDigit _ 0 = 1
+lastDigit x y = ((x `rem` 10) ^ ((y `rem` 4) + 4)) `rem` 10
