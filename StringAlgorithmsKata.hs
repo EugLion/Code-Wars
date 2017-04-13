@@ -1,7 +1,8 @@
 module StringAlgorithmsKata where
 
-import Data.List (delete, nub, maximumBy, subsequences, intersect)
+import Data.List (delete, nub, maximumBy, subsequences, intersect, (\\))
 import Data.Ord (comparing)
+import Data.Maybe
 
 -- | List all permutations of a list: https://biturl.io/Permutations
 -- | my original solution
@@ -41,3 +42,18 @@ typo x = case x of
 
 getPINs :: String -> [String]
 getPINs = mapM typo
+
+
+-- | Find the word hidden in triplets: https://biturl.io/SecretStr
+-- | my original solution
+decodeTriplets :: [String] -> String
+decodeTriplets p =
+  decodePairs $ nub $ concatMap (\[a, b, c] -> [(a, b), (b, c)]) p
+
+decodePairs :: [(Char, Char)] -> String
+decodePairs []       = ""
+decodePairs [(x, y)] = x : y : ""
+decodePairs p        = first : decodePairs rest
+ where
+  first = head (nub (map fst p) \\ nub (map snd p))
+  rest  = filter ((/=) first . fst) p
