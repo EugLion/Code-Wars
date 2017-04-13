@@ -6,9 +6,9 @@ From now on, this will be the place where I post my solutions. They are commente
 ### Current Progress
 The lower the number the better (this system somehow reflects levels in karate).
 
-| Overall | Haskell | Python | Swift |
-| :-----: | :-----: | :----: | :---: |
-| 4 kyu   | 5 kyu   | 5 kyu  | 8kyu  |
+| Overall | Haskell | Python | Swift|
+| :-----: | :-----: | :----: | :---:|
+| 4 kyu   | 4 kyu   | 5 kyu  | 8kyu |
 
  Be sure to add me on Code Wars ([profile link][2]) - I just started learning Haskell and I'd love to be in contact with some skilled people; or just to meet new friends!
 
