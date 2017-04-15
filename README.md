@@ -13,7 +13,7 @@ You can see all the katas I've completed on [my profile][2]. Here is just a summ
 | 3                     | 3           | 7           | 3                  |
 
 ### Current Progress
- You can see my current progress on the banner at the bottom. It will be always up-to-date. For more stats, you can click it and see my profile on Code Wars.
+ You can see my current progress on the banner at the bottom. It will be always up-to-date. For more stats, you can click it and look at my profile on Code Wars.
  Be sure to ally me - I just started learning Haskell and I'd love to speak with some skilled Haskellers; or just to meet new friends!
 
  [![EugLion's profile on Code Wars][3]][2]
