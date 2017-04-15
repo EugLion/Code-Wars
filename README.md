@@ -3,7 +3,7 @@
 
 This is the place where I post my solutions of the katas I solve. They are commented and contain links to the exercises. Sometimes I use somebody else's solution, if mine is significantly worse or uglier - I never use code I don't fully understand, though, and I try to implement others' algorithms myself rather than copying them.
 
-If you're also learning Haskell, or if you're already a professional Haskell developer, please ally me. I just started learning it and I'd love to speak with other Haskellers, find some inspiration and meet new friends!
+Whether you're also learning Haskell, or if you're already a professional Haskell developer, please ally me. I just started learning it and I'd love to speak with other Haskellers, find some inspiration and meet new friends!
 
 ## Current progress &nbsp;&nbsp; [![EugLion's profile on Code Wars][3]][2]
 You can see all the katas I've completed on [my profile][2]. Here is just a summary to show you how many katas I've completed from the different categories. Please note that the categories are entirely made up by me and not any offical kata groups.
