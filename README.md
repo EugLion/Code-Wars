@@ -10,7 +10,7 @@ Whether you're also learning Haskell, or if you're already a professional Haskel
 
 | Haskell Specific Kata | Number Kata | String Kata | Combinatorics kata |
 | :-------------------: | :---------: | :---------: | :----------------: |
-| 3                     | 3           | 7           | 3                  |
+| 3                     | 4           | 7           | 3                  |
 
 [1]: https://www.codewars.com/
 [2]: https://www.codewars.com/users/EugLion
