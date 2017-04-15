@@ -1,7 +1,7 @@
 ## Code Wars
 [Code Wars][1] is a website that allows developers to train their skills by solving various mind-bogging tasks (or _katas_).
 
-From now on, this will be the place where I post my solutions. They are commented and contain links to the original exercises. Sometimes I use somebody else's solution, if mine is significantly worse or uglier - I never use code I don't fully understand, though, and I try to implement others' algorithms myself rather than copying them.
+This is the place where I post my solutions of the katas I solve. They are commented and contain links to the exercises. Sometimes I use somebody else's solution, if mine is significantly worse or uglier - I never use code I don't fully understand, though, and I try to implement others' algorithms myself rather than copying them.
 
 If you're also learning Haskell, or if you're already a professional Haskell developer, please ally me. I just started learning it and I'd love to speak with other Haskellers, find some inspiration and meet new friends!
 
