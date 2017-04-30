@@ -13,8 +13,9 @@ codeTable = zip (words "M CM D CD C XC L XL X IX V IV I")
 
 fromRoman :: String -> Maybe Int
 fromRoman "" = Just 0
-fromRoman s  = case prefixes of
-  ((rest, val):_) -> (val+) <$> fromRoman rest
-  _     -> Nothing
- where
-  prefixes = [ (drop (length c) s, n) | (c, n) <- codeTable, c `isPrefixOf` s ]
+fromRoman s =
+  case prefixes of
+    ((rest, val):_) -> (val +) <$> fromRoman rest
+    _ -> Nothing
+  where
+    prefixes = [(drop (length c) s, n) | (c, n) <- codeTable, c `isPrefixOf` s]

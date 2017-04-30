@@ -3,7 +3,7 @@ module ConvertStringToCamelCaseKata where
 import Data.Char (toUpper)
 
 -- | Given a string of separated words, return them in camelCase (5 kyu)
--- | Link: 
+-- | Link: https://biturl.io/camelCase
 
 -- | My original solution
 -- another possibility was to use function splitOneOf
@@ -15,4 +15,4 @@ toCamelCase xs =
   where
     capfst "" = ""
     capFst (x:xs) = toUpper x : xs
-    
+

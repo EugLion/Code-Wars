@@ -8,10 +8,10 @@ import Data.Ord (comparing)
 
 -- | My original solution
 lcs :: String -> String -> String
-lcs [] _  = []
-lcs _  [] = []
+lcs [] _ = []
+lcs _ [] = []
 lcs s@(x:xs) t@(y:ys)
-  | x == y    = x : lcs xs ys
+  | x == y = x : lcs xs ys
   | otherwise = maximumBy (comparing length) [lcs xs t, lcs s ys]
 
 -- | More elegant solution, making use of some interesting List functions

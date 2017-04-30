@@ -7,9 +7,11 @@ import Data.Monoid
 
 -- | My original solution
 myToList :: Foldable t => t a -> [a]
-myToList = foldMap (:[])
+myToList = foldMap (: [])
 
-newtype Min a = Min { getMin :: Maybe a }
+newtype Min a = Min
+  { getMin :: Maybe a
+  }
 
 instance Ord a => Monoid (Min a) where
   mempty = Min Nothing
@@ -24,9 +26,3 @@ myMinimum xs = getMin $ foldMap (Min . Just) xs
 
 myFoldr :: Foldable t => (a -> b -> b) -> b -> t a -> b
 myFoldr f z t = appEndo (foldMap (Endo . f) t) z
-
-
-
-
-
-
