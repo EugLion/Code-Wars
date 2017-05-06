@@ -28,7 +28,7 @@ caesarSort s =
              else b)
         []
         zipped
-    base s@(x:_) = map (\c -> (ord c - ord x) `mod` 26) s
+    base z@(x:_) = map (\c -> (ord c - ord x) `mod` 26) z
 
 -- | More elegant and altogether better solution using groupBy and sortBy
 caesarSortNew :: [String] -> [[String]]

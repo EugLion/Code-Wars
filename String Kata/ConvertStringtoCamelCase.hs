@@ -9,10 +9,11 @@ import Data.Char (toUpper)
 -- another possibility was to use function splitOneOf
 toCamelCase :: String -> String
 toCamelCase "" = ""
-toCamelCase xs =
-  let (a, b) = break (flip elem "-_") xs
-  in a ++ (capFst $ toCamelCase $ drop 1 b)
+toCamelCase s =
+  let (a, b) = break (`elem` "-_") s
+  in a ++ capFst (toCamelCase $ drop 1 b)
   where
-    capfst "" = ""
+    capFst "" = ""
     capFst (x:xs) = toUpper x : xs
+
 
