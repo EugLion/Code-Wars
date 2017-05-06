@@ -1,7 +1,5 @@
 module CombinationsKata where
 
-import Data.List (tails)
-
 -- | List all combinations of length n of a list (6 kyu)
 -- | Link: https://biturl.io/Combinations
 
@@ -25,6 +23,9 @@ combinations' n (x:xs) = xcomb ++ rest
 
 -- | A cleaner and more elegant solution I found on Haskell Wiki
 combinations'' :: Int -> [a] -> [[a]]
-combinations'' 0 _ = []
+combinations'' 0 _ = [[]]
 combinations'' n xs =
-  [y : ys | y:xs' <- tails xs, ys <- combinations'' (n - 1) xs']
+  [ y : ys
+  | (y, i) <- zip xs [0 .. (length xs - 1)]
+  , ys <- combinations'' (n - 1) (drop (i + 1) xs)
+  ]
