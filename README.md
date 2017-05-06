@@ -6,7 +6,7 @@ This is the place where I post my solutions of the katas I solve. They are comme
 Whether you're also learning Haskell, or if you're already a professional Haskell developer, please ally me. I just started learning it and I'd love to speak with other Haskellers, find some inspiration and meet new friends!
 
 ## Current progress &nbsp;&nbsp; [![EugLion's profile on Code Wars][3]][2]
- You can see my current kyu on the banner above. It will be always up-to-date. It also links to my profile on Code Wars, so you can look at some more detailed stats. Here is just a summary to show you how many katas I've completed from the different categories. Please note that the categories are entirely made up by me and not any offical kata groups.
+ You can see my current kyu on the banner above, it will be always up-to-date. It also links to my profile on Code Wars, where you can look at some more detailed stats. Here is just a summary of how many katas I've completed from different categories.
 
 | Haskell-specific Kata | Number Kata | String Kata | Combinatorics kata |
 | :-------------------: | :---------: | :---------: | :----------------: |
