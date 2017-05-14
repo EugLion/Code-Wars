@@ -8,4 +8,4 @@ import Data.List (delete, nub)
 -- | My original solution
 permutations :: Eq a => [a] -> [[a]]
 permutations [] = [[]]
-permutations xs = nub [x : ys | x <- xs, ys <- permutations (delete x xs)]
+permutations xs = nub [ x : ys | x <- xs, ys <- permutations (delete x xs) ]

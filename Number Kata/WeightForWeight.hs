@@ -11,8 +11,8 @@ import Data.Ord (comparing)
 -- originally I compared the number and digSum separately (see Lesson learned)
 orderWeight :: String -> String
 orderWeight xs = unwords $ sortBy (comparing digSum) (words xs)
-  where
-    digSum x = (sum $ map digitToInt x, x)
+ where
+  digSum x = (sum $ map digitToInt x, x)
 
 -- | Lesson learned: When comparing tuples, x1 and x2 are compared first
 -- and then if they are equal, y1 and y2 are compared second etc.

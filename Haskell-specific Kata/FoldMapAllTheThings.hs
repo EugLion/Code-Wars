@@ -7,7 +7,7 @@ import Data.Monoid
 
 -- | My original solution
 myToList :: Foldable t => t a -> [a]
-myToList = foldMap (: [])
+myToList = foldMap (:[])
 
 newtype Min a = Min
   { getMin :: Maybe a

@@ -10,7 +10,7 @@ import Data.List (nub)
 recoverSecret :: Eq a => [[a]] -> [a]
 recoverSecret [] = []
 recoverSecret ts = first : recoverSecret rest
-  where
-    isFst x = all (notElem x . tail) ts
-    first = head $ filter isFst (nub $ concat ts)
-    rest = filter (not . null) $ map (dropWhile (== first)) ts
+ where
+  isFst x = all (notElem x . tail) ts
+  first = head $ filter isFst (nub $ concat ts)
+  rest  = filter (not . null) $ map (dropWhile (==first)) ts

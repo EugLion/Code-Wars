@@ -10,10 +10,9 @@ import Data.Char (toUpper)
 toCamelCase :: String -> String
 toCamelCase "" = ""
 toCamelCase s =
-  let (a, b) = break (`elem` "-_") s
-  in a ++ capFst (toCamelCase $ drop 1 b)
-  where
-    capFst "" = ""
-    capFst (x:xs) = toUpper x : xs
+  let (a, b) = break (`elem`"-_") s in a ++ capFst (toCamelCase $ drop 1 b)
+ where
+  capFst ""     = ""
+  capFst (x:xs) = toUpper x : xs
 
 
