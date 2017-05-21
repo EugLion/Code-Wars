@@ -13,5 +13,5 @@ Whether you're also learning Haskell, or if you're already a professional Haskel
 | 3                     | 6           | 10          | 5                  |
 
 [1]: https://www.codewars.com/
-[2]: https://www.codewars.com/users/EugLion
-[3]: https://www.codewars.com/users/EugLion/badges/micro
+[2]: https://www.codewars.com/users/Eugeleo
+[3]: https://www.codewars.com/users/Eugeleo/badges/micro
