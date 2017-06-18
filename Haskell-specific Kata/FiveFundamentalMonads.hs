@@ -5,10 +5,10 @@ module FiveFundamentalMonadsKata where
 -- | Implement the five basic Monads (Id, Maybe, Reader, State, Writer) (4 kyu)
 -- | Link: https://biturl.io/5Monads
 
--- | My original solution
 import Prelude hiding (Monad, Identity, Maybe(..), State, Reader, Writer)
 import Data.Monoid
 
+-- | My original solution
 class Monad m where
   return :: a -> m a
   (>>=) :: m a -> (a -> m b) -> m b
