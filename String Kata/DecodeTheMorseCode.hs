@@ -4,6 +4,7 @@ module DecodeTheMorseCodeKata where
 -- | Link: https://biturl.io/Morse1
 
 import Data.Map (Map, (!))
+import Data.List (groupBy)
 import Data.List.Split (splitOn)
 
 -- | Refactored solution I came up with after completition of this kata
@@ -19,3 +20,10 @@ decodeMorse' =
     . filter (not . null)
     . map (concatMap (morseCodes!) . words)
     . splitOn "   "
+
+-- | Another nice solution which uses only groupBy
+decodeMorse :: String -> String
+decodeMorse = unwords . words . concatMap go . groupBy (\x y -> y /= ' ')
+ where
+  go x = if x == " " then x else morseCodes ! (trim x)
+  trim = f . f where f = reverse . dropWhile (==' ')
