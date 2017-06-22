@@ -1,1 +1,13 @@
+# Stack project files #
+.stack-work
+Setup.hs
+*.cabal
+*.yaml
+
+# Our files #
+app/
+IO Files/
+test/
+
+# VSCode files #
 .vscode
