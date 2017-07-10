@@ -7,7 +7,6 @@ module AlgebraicIsomorphism where
 
 import Data.Void
 import Data.Tuple
-import Data.Maybe
 import Control.Arrow ((***))
 
 type ISO a b = (a -> b, b -> a)

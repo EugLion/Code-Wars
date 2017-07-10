@@ -1,6 +1,7 @@
 module Isomorphism where
 
 import Data.Void
+import Control.Arrow ((***))
 
 -- | Make all the isomorphisms typecheck (3 kyu)
 -- | Link: https://biturl.io/Iso
@@ -38,7 +39,7 @@ trans (ab, ba) (bc, cb) = (bc . ab, ba . cb)
 
 -- We can combine isomorphism:
 isoTuple :: ISO a b -> ISO c d -> ISO (a, c) (b, d)
-isoTuple (ab, ba) (cd, dc) = (\(a, c) -> (ab a, cd c), \(b, d) -> (ba b, dc d))
+isoTuple (ab, ba) (cd, dc) = (ab *** cd, ba *** dc)
 
 isoList :: ISO a b -> ISO [a] [b]
 isoList (ab, ba) = (map ab, map ba)
