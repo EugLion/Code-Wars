@@ -7,9 +7,16 @@ import Data.List
 
 -- | My original solution
 deleteNth :: [Int] -> Int -> [Int]
-deleteNth xs n = foldl (\b a -> if count a b >= n then b else b ++ [a]) [] xs
- where
-  count a = length . filter (==a)
+deleteNth xs n =
+  foldl
+    (\b a ->
+       if count a b >= n
+         then b
+         else b ++ [a])
+    []
+    xs
+  where
+    count a = length . filter (== a)
 
 -- | A cool solution using group
 deleteNth' :: [Int] -> Int -> [Int]

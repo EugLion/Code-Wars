@@ -5,5 +5,5 @@ module Largest5DigitNumberInSeries where
 
 -- | My original solution
 digit5 :: String -> Int
-digit5 []       = 0
+digit5 [] = 0
 digit5 s@(_:xs) = max (read $ take 5 s) (digit5 xs)

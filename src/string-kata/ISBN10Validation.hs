@@ -1,6 +1,6 @@
 module ISBN10Validation where
 
-import Data.Char (isDigit, digitToInt)
+import Data.Char (digitToInt, isDigit)
 
 -- | Check if string is a valid ISBN10 number (5 kyu)
 -- | Link: https://biturl.io/ISBN10Val
@@ -9,10 +9,10 @@ import Data.Char (isDigit, digitToInt)
 -- originally the solution was almost the same
 validISBN10 :: String -> Bool
 validISBN10 s =
-  length s ==    10
-    &&    all isDigit (take 9 s)
-    &&    (last s == 'X' || isDigit (last s))
-    &&    sum (zipWith value [1, 2 ..] s) `mod` 11 ==    0
- where
-  value _ 'X' = 100
-  value x y   = digitToInt y * x
+  length s == 10 &&
+  all isDigit (take 9 s) &&
+  (last s == 'X' || isDigit (last s)) &&
+  sum (zipWith value [1,2 ..] s) `mod` 11 == 0
+  where
+    value _ 'X' = 100
+    value x y = digitToInt y * x

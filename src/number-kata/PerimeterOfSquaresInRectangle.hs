@@ -8,5 +8,3 @@ perimeter :: Integer -> Integer
 perimeter n = 4 * sum (take (1 + fromInteger n) fibs)
  where
   fibs = 1 : 1 : zipWith (+) fibs (tail fibs)
-
-

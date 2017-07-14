@@ -10,4 +10,4 @@ import Data.Char (digitToInt)
 isHappy :: Int -> Bool
 isHappy 1 = True
 isHappy 4 = False
-isHappy n = isHappy $ sum $ map ((^2) . digitToInt) (show n)
+isHappy n = isHappy . sum $ map ((^ 2) . digitToInt) (show n)

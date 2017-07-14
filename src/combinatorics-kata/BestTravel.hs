@@ -9,11 +9,14 @@ import Data.Maybe (listToMaybe)
 -- originally the solution was almost the same
 chooseBestSum :: Int -> Int -> [Int] -> Maybe Int
 chooseBestSum m v ts = listToMaybe [foldr (step . sum) 0 (combinations v ts)]
- where
-  step a b = if b < a && a <= m then a else b
-  combinations 0 _ = [[]]
-  combinations n xs =
-    [ y : ys
-    | (y, i) <- zip xs [0 .. (length xs - 1)]
-    , ys     <- combinations (n - 1) (drop (i + 1) xs)
-    ]
+  where
+    step a b =
+      if b < a && a <= m
+        then a
+        else b
+    combinations 0 _ = [[]]
+    combinations n xs =
+      [ y : ys
+      | (y, i) <- zip xs [0 .. (length xs - 1)]
+      , ys <- combinations (n - 1) (drop (i + 1) xs)
+      ]

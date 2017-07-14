@@ -1,8 +1,8 @@
 module StringKata where
 
-import DecodeTheMorseCode
 import CaesarCipherSorting
 import ConvertStringToCamelCase
+import DecodeTheMorseCode
 import DetectPangram
 import ISBN10Validation
 import Largest5DigitNumberInSeries

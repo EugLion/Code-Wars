@@ -5,6 +5,6 @@ module PascalsTriangle where
 
 -- | My original solution
 pascalsTriangle :: Int -> [Int]
-pascalsTriangle n = concat $ take n $ iterate nextRow [1]
+pascalsTriangle n = concat . take n $ iterate nextRow [1]
  where
   nextRow r = zipWith (+) (0 : r) (r ++ [0])

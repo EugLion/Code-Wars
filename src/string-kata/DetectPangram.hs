@@ -8,4 +8,4 @@ import Data.Char (toLower)
 -- | Refactored solution I came up with after completition of this kata
 -- originally the solution was almost the same
 isPangram :: String -> Bool
-isPangram s = all (`elem`map toLower s) ['a' .. 'z']
+isPangram s = all (`elem` map toLower s) ['a' .. 'z']
